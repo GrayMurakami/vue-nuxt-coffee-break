@@ -1,0 +1,276 @@
+:root {
+  --main-font: 'Times New Roman', Times, serif;
+  --main-color: #4b2f17;
+  --header-bg: url('/img/top/coffee_top.jpg') no-repeat center center/cover;
+  --btn-border: #9a0303;
+}
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background: var(--header-bg);
+}
+
+.header-place {
+  background: url("/img/place/coffee_place.jpg") no-repeat center center/cover;
+}
+
+.header-contact {
+  background: url('/img/contact/coffee_contact.jpg') no-repeat center center/cover;
+}
+
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+
+/* Catch copy & Title */
+.catch-copy,
+.page-title {
+  text-align: center;
+  width: 100%;
+  color: #4c0505;
+  font-family: var(--main-font);
+  font-size: 11vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+/* Модификатор */
+.catch-copy-white {
+  color: aliceblue !important;
+}
+
+/* Letters */
+.letter {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+  margin-right: 0.15em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    transform: scale(1.3) !important;
+  }
+
+  &.lower {
+    top: 10px;
+  }
+}
+
+/* Headings */
+.heading02,
+.heading02-left,
+.heading02-right {
+  font-family: var(--main-font);
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+
+  & > span {
+    padding-bottom: 4px;
+    display: inline-block;
+    position: relative;
+    font-size: 1.4em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: #000;
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.heading02-left {
+  text-align: start;
+
+  & > span {
+    padding-left: 1em;
+  }
+}
+
+.heading02-right {
+  text-align: end;
+
+  & > span {
+    padding-right: 1em;
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.heading02 {
+  text-align: center;
+}
+
+/* img-link */
+.img-link {
+  & img {
+    display: block;
+  }
+
+  & a:hover .heading02-left > span::after,
+  & a:hover .heading02-right > span::after {
+    width: 100%;
+  }
+}
+
+/* Main content */
+.lead {
+  font-family: var(--main-font);
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.lead-welcome-head {
+  margin-bottom: 2em;
+  text-align: start;
+}
+
+.lead-welcome {
+  text-indent: 1em;
+  text-align: start;
+  line-height: 1.2;
+  color: var(--main-color);
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto 50px;
+  border: 2px solid var(--btn-border);
+  text-decoration: none;
+  padding: 13px 0 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+/* Footer */
+.footer {
+  display: block;
+  text-align: center;
+  padding: 1.5em;
+  border-top: 1.5px solid var(--main-color);
+  width: 60%;
+  margin: 0 auto;
+}
+
+.copy {
+  letter-spacing: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Navigation */
+.globalnav {
+  font-family: var(--main-font);
+  position: relative;
+  padding: 0 10px;
+  transform: translate(0, -50%);
+}
+
+.globalnav-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+  border: 2px solid var(--btn-border);
+
+  & li {
+    display: table-cell;
+    text-align: center;
+
+    &:not(:first-child) {
+      border-left: 2px solid var(--btn-border);
+    }
+
+    & a {
+      font-size: 1.7rem;
+      display: block;
+      background: #fff;
+      text-decoration: none;
+      padding: 15px 0;
+
+      &.active {
+        background: #000;
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* --- media --- */
+@media (min-width: 768px) {
+  .header {
+    height: 400px;
+    padding-bottom: 0;
+  }
+  .logo {
+    width: 120px;
+    padding: 20px;
+  }
+  .catch-copy,
+  .page-title {
+    font-size: 100px;
+  }
+  .heading02,
+  .heading02-left,
+  .heading02-right {
+    margin-bottom: 40px;
+  }
+  .btn {
+    width: 400px;
+    padding: 20px 0;
+    font-size: 1.4em;
+  }
+  .footer {
+    padding: 1.5em;
+  }
+  .globalnav-list {
+    & li {
+      & a:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
