@@ -11,14 +11,14 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 
 ## 🛠️ Features
 
-- **Nuxt 4 + Vue 3**: modern stack, modular architecture
-- **Fully Responsive**: clean CSS, mobile-friendly
-- **Multiple Pages**: Home, Variety, Place & Life Hack, Contact
-- **Component-based**: headers, footers, navigation as components
-- **Animated Letters**: hover effects on page titles
-- **Scoped and Nested CSS**: maintainable, modern styles
-- **No SCSS Processors**: only pure, modern CSS nesting
-- **SPA**: fast navigation, no reloads
+- **Nuxt 4 + Vue 3**: *modern stack, modular architecture*
+- **Fully Responsive**: *clean CSS, mobile-friendly*
+- **Multiple Pages**: *Home, Variety, Place & Life Hack, Contact*
+- **Component-based**: *headers, footers, navigation as components*
+- **Animated Letters**: *hover effects on page titles*
+- **Scoped and Nested CSS**: *maintainable, modern styles*
+- **No SCSS Processors**: *only pure, modern CSS nesting*
+- **SPA**: *fast navigation, no reloads*
 
 ## ✨ Customization
 
