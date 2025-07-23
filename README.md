@@ -11,7 +11,7 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 
 ## 🛠️ Features
 
-- *Nuxt 3 + Vue 3*: modern stack, modular architecture
+- **Nuxt 4 + Vue 3**: modern stack, modular architecture
 - *Fully Responsive*: clean CSS, mobile-friendly
 - *Multiple Pages*: Home, Variety, Place & Life Hack, Contact
 - *Component-based*: headers, footers, navigation as components
