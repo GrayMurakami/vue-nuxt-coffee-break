@@ -20,7 +20,7 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 - *No SCSS Processors*: only pure, modern CSS nesting
 - *SPA*: fast navigation, no reloads
 
-## 💻 Customization
+## ✨ Customization
 
 - All images are in public/img/
 - CSS: Main styles in assets/css/common.css
