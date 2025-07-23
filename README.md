@@ -1,4 +1,4 @@
-# Coffee Break Site ☕️
+# Coffee Break Website ☕️
 
 A modern, responsive, multi-page site about coffee — built with [Nuxt 4](https://nuxt.com/) and Vue 3.  
 Inspired by the classic HTML/CSS version, now reimagined with reusable components and best practices.
