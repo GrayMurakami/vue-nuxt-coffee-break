@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# Coffee Break Site (Nuxt 4 + Vue 3)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Coffee Break Preview](./screenshot.jpg)
 
-## Setup
+A modern 3D calculator app built with Nuxt 4 & Vue 3.  
+Features animated tilt, responsive design, clipboard copy, and a clean dark UI.
 
-Make sure to install dependencies:
+## 🚀 Live Demo
+
+[View Online (Netlify)](https://coffee-break-bygray.netlify.app/)
+
+## 🛠️ Features
+
+- **3D Tilt Animation** — Calculator visually responds to mouse movement.
+- **Standard Operations** — Addition, subtraction, multiplication, division, square root, plus/minus, backspace, clear, decimal point.
+- **Copy Result** — Copy the result to clipboard with one click (📋).
+- **Custom Design** — Dark theme, colored buttons, animated hover effects.
+- **Responsive Layout** — Works great on both desktop and mobile.
+- **Input Limitations** — Prevents overflow, handles invalid input, and protects against errors.
+- **Built with Nuxt 4 + Vue 3** — Uses `<script setup>`, Composition API, and Nuxt SSR for a modern codebase.
+
+## 🖥️ How to Run Locally
 
 ```bash
-# npm
+git clone https://github.com/GrayMurakami/vue-nuxt-coffe-break.git
+cd 3d-calculator-nuxt
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+Visit http://localhost:3000 in your browser.
 
-## Production
 
-Build the application for production:
+## 🏗️ Production
+Build for production on Netlify:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
