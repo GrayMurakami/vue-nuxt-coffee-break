@@ -3,7 +3,7 @@
 A modern, responsive, multi-page site about coffee — built with [Nuxt 4](https://nuxt.com/) and Vue 3.  
 Inspired by the classic HTML/CSS version, now reimagined with reusable components and best practices.
 
-![Coffee Break Screenshot](public/img/common/coffee_logo.svg)
+![Coffee Break Screenshot](public/img/common/coffee_logo2.jpeg)
 
 ## 🚀 Live Demo
 
@@ -29,7 +29,7 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 ## 🖥️ How to Run Locally
 
 ```bash
-git clone https://github.com/GrayMurakami/vue-nuxt-coffe-break.git
+git clone https://github.com/GrayMurakami/vue-nuxt-coffee-break.git
 cd 3d-calculator-nuxt
 npm install
 npm run dev
