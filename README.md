@@ -23,9 +23,7 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 ## 💻 Customization
 
 ・ All images are in public/img/
-
 ・ CSS: Main styles in assets/css/common.css
-
 ・ Add or change page meta via definePageMeta in each .vue file
 
 ## 🖥️ How to Run Locally
