@@ -30,7 +30,7 @@ Inspired by the classic HTML/CSS version, now reimagined with reusable component
 
 ```bash
 git clone https://github.com/GrayMurakami/vue-nuxt-coffee-break.git
-cd 3d-calculator-nuxt
+cd coffee-break
 npm install
 npm run dev
 ```
