@@ -161,6 +161,24 @@ function onSubmit() {
   padding: 2rem 1.5rem;
   max-width: 640px;
   margin: 0 auto 60px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 120px;
+    height: 120px;
+    background-image: url('/img/common/coffee_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 .lead-welcome-head {
