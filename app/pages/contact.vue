@@ -3,15 +3,16 @@
     <div class="wrapper">
       <section class="section-contact">
         <div class="lead">
-          <div class="lead-welcome-head">&#128222; CONTACT US</div>
+          <div class="lead-welcome-head">&#128222; Get in Touch</div>
           <div class="lead-welcome">
-            If you want to ask me something, feel free to contact me.
+            Feel free to contact me with any questions or feedback.
           </div>
         </div>
+        <div class="contact-form-card">
         <form @submit.prevent="onSubmit" class="form">
           <fieldset class="form-block">
             <legend class="form-title">
-              <span class="must">※ 必須</span>お問い合わせ内容:
+              <span class="must">※ 必須</span>&#x1F4DD; お問い合わせ内容:
             </legend>
             <div class="form-input">
               <div class="selectbox-wrap">
@@ -22,7 +23,7 @@
               </div>
             </div>
           </fieldset>
-
+        
           <fieldset class="form-block">
             <legend class="form-title">
               <span class="must">※ 必須</span>Enjoy the content?
@@ -37,7 +38,7 @@
 
           <fieldset class="form-block">
             <legend class="form-title">
-              <span class="must">※ 必須</span>How did you find this page?
+              <span class="must">※ 必須</span>&#x1F310; How did you find this page?
             </legend>
             <div class="form-input">
               <input type="checkbox" id="checkbox1" value="Internet search" v-model="form.foundBy">
@@ -69,21 +70,28 @@
           </fieldset>
 
           <fieldset class="form-block">
-            <legend class="form-title"><span class="must">※ 必須</span>Email address:</legend>
+            <legend class="form-title"><span class="must">※ 必須</span>&#x2709; Email address:</legend>
             <div class="form-input">
               <input type="email" class="input-text" v-model="form.email" required>
             </div>
           </fieldset>
 
           <fieldset class="form-block">
-            <legend class="form-title"><span class="must">※ 必須</span>Inquiry content:</legend>
+            <legend class="form-title"><span class="must">※ 必須</span>&#x1F4AC; Inquiry content:</legend>
             <div class="form-input">
               <textarea class="textarea" v-model="form.message" required></textarea>
             </div>
           </fieldset>
 
-          <button type="submit" class="submit-btn">SUBMIT</button>
+          <div class="submit-wrapper">
+            <button type="submit" class="submit-btn coffee-steam">
+              SUBMIT
+              <span class="bean" v-for="i in 3" :key="i"></span>
+            </button>
+          </div>
+
         </form>
+        </div>
       </section>
     </div>
   </main>
@@ -146,6 +154,30 @@ function onSubmit() {
   padding: 0 4%;
 }
 
+.contact-form-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+
+.lead-welcome-head {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.lead-welcome {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .section-contact {
   padding: 30px 0 50px;
 }
@@ -162,10 +194,18 @@ textarea {
   height: 43px;
   padding: 0 10px;
   border: 1px solid #000;
-  border-radius: 0;
-  background: #fff;
+  border-radius: 6px;
+  background: #ccc;
   font-size: 1.6rem;
   line-height: 43px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  vertical-align: auto !important;
+  
+  &:focus {
+    border-color: #12d1ef;
+    outline: none;
+  }
 }
 
 .selectbox-wrap {
@@ -194,9 +234,16 @@ textarea {
 
 .form-title {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.9rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input input[type="radio"],
+.form-input input[type="checkbox"] {
+  margin-left: 1.5rem;
 }
 
 .must {
@@ -213,25 +260,107 @@ textarea {
   padding: 10px;
 }
 
-.submit-btn {
-  display: block;
-  appearance: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  background: #000;
-  color: #fff;
-  font-size: 1.4rem;
-  width: 116px;
-  height: 43px;
-  line-height: 43px;
-  margin: 0 auto;
-  transition: transform 0.4s ease;
+.submit-wrapper {
+  position: relative;
 
-  &:hover {
-    transform: scale(1.2);
+  .submit-btn {
+    display: block;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    width: 116px;
+    height: 43px;
+    line-height: 43px;
+    margin: 0 auto;
+    transition: transform 0.4s ease;
+    background-color: #3c2f2f;
+    border-radius: 6px;
+    max-width: 200px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: #5a4343;
+    }
+  }
+
+  .bean {
+    background-image: url('/img/contact/bean.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    bottom: 0px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(0, 0) scale(0.7) rotate(45deg);
+  }
+
+  /* 🔥 При ховере включаем анимацию и делаем зерно видимым */
+  &:hover .bean {
+    opacity: 1;
+    animation: float-bean 7s ease-in-out forwards;
+  }
+
+  .bean:nth-child(1) {
+    left: 20%;
+    bottom: 35px;
+    animation-delay: 0s;
+  }
+
+  .bean:nth-child(2) {
+    left: 45%;
+    bottom: 35px;
+    animation-delay: 0.7s;
+    opacity: 0;
+  }
+
+  .bean:nth-child(3) {
+    left: 70%;
+    bottom: 35px;
+    animation-delay: 1.4s;
+    opacity: 0;
   }
 }
+
+@keyframes float-bean {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-0.5px, -20px) scale(1.1) rotate(45deg);
+    opacity: 0.4;
+  }
+  20% {
+    transform: translate(0.5px, -40px) scale(1.2) rotate(50deg);
+    opacity: 0.7;
+  }
+  35% {
+    transform: translate(-0.5px, -60px) scale(1.3) rotate(50deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0.5px, -80px) scale(1.4) rotate(60deg);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translate(-0.5px, -100px) scale(1.5) rotate(60deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, -120px) scale(1.6) rotate(70deg);
+    opacity: 0;
+  }
+}
+
 
 /* ======= media ======= */
 @media (min-width: 768px) {

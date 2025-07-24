@@ -47,6 +47,7 @@
 /* Модификатор */
 .catch-copy-white {
   color: aliceblue !important;
+  padding-right: 22vw;
 }
 
 /* Letters */
@@ -54,7 +55,7 @@
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
-  margin-right: 0.15em;
+  margin-right: 0.25em;
 
   &:last-child {
     margin-right: 0;
@@ -83,7 +84,6 @@
     padding-bottom: 4px;
     display: inline-block;
     position: relative;
-    font-size: 1.4em;
 
     &::after {
       content: "";

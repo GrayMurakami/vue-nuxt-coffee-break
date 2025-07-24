@@ -62,7 +62,6 @@
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 0;
 }
 
 .img-link {
@@ -121,7 +120,6 @@
 .heading02 span {
   display: inline-block;
   position: relative;
-  font-size: 1.4em;
   &::after {
     content: "";
     position: absolute;
